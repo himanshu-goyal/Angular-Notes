@@ -16,16 +16,19 @@ export class AppComponent {
         return this.firstName + ' ' + this.lastName;
     }
 
+    //to apply multiple styling class, we seperate them by spaces as follows.
     classesToApply: string = 'boldClass italicsClass';
     applyBoldClass: boolean = true;
     applyItalicsClass: boolean = false;
 
+    //This method will be used if we want to removed or add multiple class.
+    //it will done using ngClass in html.
     addClasses() {
         let classes = {
+            //key value pair.
             boldClass: this.applyBoldClass,
             italicsClass: this.applyItalicsClass
         };
-
         return classes;
     }
     onClick(): void{

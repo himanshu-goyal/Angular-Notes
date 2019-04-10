@@ -14,6 +14,7 @@ var AppComponent = /** @class */ (function () {
         this.firstName = 'Tom';
         this.lastName = 'Hopkins';
         this.isDisabled = false;
+        //to apply multiple styling class, we seperate them by spaces as follows.
         this.classesToApply = 'boldClass italicsClass';
         this.applyBoldClass = true;
         this.applyItalicsClass = false;
@@ -21,8 +22,11 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.getFullName = function () {
         return this.firstName + ' ' + this.lastName;
     };
+    //This method will be used if we want to removed or add multiple class.
+    //it will done using ngClass in html.
     AppComponent.prototype.addClasses = function () {
         var classes = {
+            //key value pair.
             boldClass: this.applyBoldClass,
             italicsClass: this.applyItalicsClass
         };
